@@ -1,0 +1,963 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8CA170C0C813468B20572E9F /* Pods_ASimone_SimoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 610D6598E35EA823B05C33FE /* Pods_ASimone_SimoneTests.framework */; };
+		A5A2B132FCAE6BE962A15BA3 /* Pods_ASimone_Simone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F3F4F911AFF18F7904797B /* Pods_ASimone_Simone.framework */; };
+		B31B73A91F6DD37100B99B24 /* MStartGameVsCpu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31B73A81F6DD37100B99B24 /* MStartGameVsCpu.swift */; };
+		B31B73AB1F6DD50900B99B24 /* MGimmeNewColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31B73AA1F6DD50900B99B24 /* MGimmeNewColor.swift */; };
+		B38CEFCC1F6EA8A0006AA751 /* GameViewActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CEFCB1F6EA8A0006AA751 /* GameViewActor.swift */; };
+		B38CEFD01F6EAB9D006AA751 /* MAttachPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CEFCF1F6EAB9D006AA751 /* MAttachPresenter.swift */; };
+		B38CEFD31F6EAD5C006AA751 /* PowerUpInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CEFD21F6EAD5C006AA751 /* PowerUpInt.swift */; };
+		B38CEFD51F6EADEE006AA751 /* GameViewActorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CEFD41F6EADEE006AA751 /* GameViewActorTests.swift */; };
+		B38CEFD81F6EAEE1006AA751 /* MTimeToBlink.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CEFD71F6EAEE1006AA751 /* MTimeToBlink.swift */; };
+		B38CEFDA1F6EAF0B006AA751 /* MNextColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CEFD91F6EAF0B006AA751 /* MNextColor.swift */; };
+		B38CEFDC1F6EAF43006AA751 /* MPlayerTurn.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CEFDB1F6EAF43006AA751 /* MPlayerTurn.swift */; };
+		B38CEFDE1F6EB371006AA751 /* MGuessColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CEFDD1F6EB371006AA751 /* MGuessColor.swift */; };
+		B38CEFE01F6EB717006AA751 /* MPause.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CEFDF1F6EB717006AA751 /* MPause.swift */; };
+		B38CEFE21F6EB7FD006AA751 /* GameViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CEFE11F6EB7FD006AA751 /* GameViewPresenter.swift */; };
+		B38CEFE41F6EB8AC006AA751 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CEFE31F6EB8AC006AA751 /* Message.swift */; };
+		B39E05141F6AC51B009B5F14 /* SinglePlayerModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E05131F6AC51B009B5F14 /* SinglePlayerModeViewController.swift */; };
+		B39E05171F6AC550009B5F14 /* SimoneFabButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E05161F6AC550009B5F14 /* SimoneFabButton.swift */; };
+		B39E05191F6AC960009B5F14 /* SimoneSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E05181F6AC960009B5F14 /* SimoneSegue.swift */; };
+		B39E051B1F6ACB2E009B5F14 /* SimoneSegueLeftToRight.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E051A1F6ACB2E009B5F14 /* SimoneSegueLeftToRight.swift */; };
+		B39E051D1F6ACB62009B5F14 /* SimoneConcreteSegueProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E051C1F6ACB62009B5F14 /* SimoneConcreteSegueProtocol.swift */; };
+		B39E051F1F6AD319009B5F14 /* SimoneSegueRightToLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E051E1F6AD319009B5F14 /* SimoneSegueRightToLeft.swift */; };
+		B39E05231F6B02EC009B5F14 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E05221F6B02EC009B5F14 /* Enums.swift */; };
+		B39E05271F6B057C009B5F14 /* SinglePlayerBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E05261F6B057C009B5F14 /* SinglePlayerBaseViewController.swift */; };
+		B39E052C1F6B0CE4009B5F14 /* CPUActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E052B1F6B0CE4009B5F14 /* CPUActor.swift */; };
+		B39E052F1F6B142E009B5F14 /* SimoneColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B39E052E1F6B142E009B5F14 /* SimoneColor.swift */; };
+		B3DC13C41F6888C2000C2B5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC13C31F6888C2000C2B5C /* AppDelegate.swift */; };
+		B3DC13CB1F6888C2000C2B5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3DC13CA1F6888C2000C2B5C /* Assets.xcassets */; };
+		B3DC13CE1F6888C2000C2B5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3DC13CC1F6888C2000C2B5C /* LaunchScreen.storyboard */; };
+		B3DC13D91F6888C2000C2B5C /* SimoneTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC13D81F6888C2000C2B5C /* SimoneTests.swift */; };
+		B3DC13E41F6888C2000C2B5C /* SimoneUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC13E31F6888C2000C2B5C /* SimoneUITests.swift */; };
+		B3DC13FA1F688B4A000C2B5C /* SquaredViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC13F91F688B4A000C2B5C /* SquaredViewController.swift */; };
+		B3DC13FC1F688B76000C2B5C /* SquaredViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC13FB1F688B76000C2B5C /* SquaredViewProtocol.swift */; };
+		B3DC13FE1F68948A000C2B5C /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC13FD1F68948A000C2B5C /* MainViewController.swift */; };
+		B3ED62521F68A610001B6383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B3DC13F11F6888F0000C2B5C /* Main.storyboard */; };
+		BF538DCB41038521B3AA6C10 /* Pods_ASimone_SimoneUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29358549C3758BEDBC6C46CC /* Pods_ASimone_SimoneUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B3DC13D51F6888C2000C2B5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3DC13B81F6888C2000C2B5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3DC13BF1F6888C2000C2B5C;
+			remoteInfo = Simone;
+		};
+		B3DC13E01F6888C2000C2B5C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B3DC13B81F6888C2000C2B5C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3DC13BF1F6888C2000C2B5C;
+			remoteInfo = Simone;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C6A87D9B2186EC08DE27BA0 /* Pods-ASimone-Simone.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASimone-Simone.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASimone-Simone/Pods-ASimone-Simone.debug.xcconfig"; sourceTree = "<group>"; };
+		29358549C3758BEDBC6C46CC /* Pods_ASimone_SimoneUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASimone_SimoneUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2DA708409704137088B002C8 /* Pods-ASimone-SimoneTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASimone-SimoneTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASimone-SimoneTests/Pods-ASimone-SimoneTests.debug.xcconfig"; sourceTree = "<group>"; };
+		610D6598E35EA823B05C33FE /* Pods_ASimone_SimoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASimone_SimoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C59BFDD07F8A8564568768A /* Pods-ASimone-SimoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASimone-SimoneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASimone-SimoneTests/Pods-ASimone-SimoneTests.release.xcconfig"; sourceTree = "<group>"; };
+		7BB20E17F6B0FC925A925916 /* Pods-ASimone-SimoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASimone-SimoneUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASimone-SimoneUITests/Pods-ASimone-SimoneUITests.release.xcconfig"; sourceTree = "<group>"; };
+		89F3F4F911AFF18F7904797B /* Pods_ASimone_Simone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASimone_Simone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B0CD2F467D2E34CFA5D57FD4 /* Pods-ASimone-SimoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASimone-SimoneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASimone-SimoneUITests/Pods-ASimone-SimoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		B31B73A81F6DD37100B99B24 /* MStartGameVsCpu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStartGameVsCpu.swift; sourceTree = "<group>"; };
+		B31B73AA1F6DD50900B99B24 /* MGimmeNewColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGimmeNewColor.swift; sourceTree = "<group>"; };
+		B38CEFCB1F6EA8A0006AA751 /* GameViewActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewActor.swift; sourceTree = "<group>"; };
+		B38CEFCF1F6EAB9D006AA751 /* MAttachPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAttachPresenter.swift; sourceTree = "<group>"; };
+		B38CEFD21F6EAD5C006AA751 /* PowerUpInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerUpInt.swift; sourceTree = "<group>"; };
+		B38CEFD41F6EADEE006AA751 /* GameViewActorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewActorTests.swift; sourceTree = "<group>"; };
+		B38CEFD71F6EAEE1006AA751 /* MTimeToBlink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTimeToBlink.swift; sourceTree = "<group>"; };
+		B38CEFD91F6EAF0B006AA751 /* MNextColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MNextColor.swift; sourceTree = "<group>"; };
+		B38CEFDB1F6EAF43006AA751 /* MPlayerTurn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPlayerTurn.swift; sourceTree = "<group>"; };
+		B38CEFDD1F6EB371006AA751 /* MGuessColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGuessColor.swift; sourceTree = "<group>"; };
+		B38CEFDF1F6EB717006AA751 /* MPause.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MPause.swift; sourceTree = "<group>"; };
+		B38CEFE11F6EB7FD006AA751 /* GameViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewPresenter.swift; sourceTree = "<group>"; };
+		B38CEFE31F6EB8AC006AA751 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B39E05131F6AC51B009B5F14 /* SinglePlayerModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerModeViewController.swift; sourceTree = "<group>"; };
+		B39E05161F6AC550009B5F14 /* SimoneFabButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoneFabButton.swift; sourceTree = "<group>"; };
+		B39E05181F6AC960009B5F14 /* SimoneSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoneSegue.swift; sourceTree = "<group>"; };
+		B39E051A1F6ACB2E009B5F14 /* SimoneSegueLeftToRight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoneSegueLeftToRight.swift; sourceTree = "<group>"; };
+		B39E051C1F6ACB62009B5F14 /* SimoneConcreteSegueProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoneConcreteSegueProtocol.swift; sourceTree = "<group>"; };
+		B39E051E1F6AD319009B5F14 /* SimoneSegueRightToLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoneSegueRightToLeft.swift; sourceTree = "<group>"; };
+		B39E05221F6B02EC009B5F14 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		B39E05261F6B057C009B5F14 /* SinglePlayerBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePlayerBaseViewController.swift; sourceTree = "<group>"; };
+		B39E052B1F6B0CE4009B5F14 /* CPUActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPUActor.swift; sourceTree = "<group>"; };
+		B39E052D1F6B0D1B009B5F14 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		B39E052E1F6B142E009B5F14 /* SimoneColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoneColor.swift; sourceTree = "<group>"; };
+		B3DC13C01F6888C2000C2B5C /* Simone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simone.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3DC13C31F6888C2000C2B5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B3DC13CA1F6888C2000C2B5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B3DC13CD1F6888C2000C2B5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B3DC13CF1F6888C2000C2B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3DC13D41F6888C2000C2B5C /* SimoneTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimoneTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3DC13D81F6888C2000C2B5C /* SimoneTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoneTests.swift; sourceTree = "<group>"; };
+		B3DC13DA1F6888C2000C2B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3DC13DF1F6888C2000C2B5C /* SimoneUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimoneUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3DC13E31F6888C2000C2B5C /* SimoneUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoneUITests.swift; sourceTree = "<group>"; };
+		B3DC13E51F6888C2000C2B5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B3DC13F11F6888F0000C2B5C /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		B3DC13F91F688B4A000C2B5C /* SquaredViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaredViewController.swift; sourceTree = "<group>"; };
+		B3DC13FB1F688B76000C2B5C /* SquaredViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquaredViewProtocol.swift; sourceTree = "<group>"; };
+		B3DC13FD1F68948A000C2B5C /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		CDB3A7A2529D7388D05BB6C5 /* Pods-ASimone-Simone.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASimone-Simone.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASimone-Simone/Pods-ASimone-Simone.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B3DC13BD1F6888C2000C2B5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A5A2B132FCAE6BE962A15BA3 /* Pods_ASimone_Simone.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3DC13D11F6888C2000C2B5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CA170C0C813468B20572E9F /* Pods_ASimone_SimoneTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3DC13DC1F6888C2000C2B5C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF538DCB41038521B3AA6C10 /* Pods_ASimone_SimoneUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		9D53831BF649CF35E9C36E34 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0C6A87D9B2186EC08DE27BA0 /* Pods-ASimone-Simone.debug.xcconfig */,
+				CDB3A7A2529D7388D05BB6C5 /* Pods-ASimone-Simone.release.xcconfig */,
+				2DA708409704137088B002C8 /* Pods-ASimone-SimoneTests.debug.xcconfig */,
+				6C59BFDD07F8A8564568768A /* Pods-ASimone-SimoneTests.release.xcconfig */,
+				B0CD2F467D2E34CFA5D57FD4 /* Pods-ASimone-SimoneUITests.debug.xcconfig */,
+				7BB20E17F6B0FC925A925916 /* Pods-ASimone-SimoneUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B38CEFD11F6EAD4B006AA751 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B38CEFD21F6EAD5C006AA751 /* PowerUpInt.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B39E05151F6AC539009B5F14 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				B39E05161F6AC550009B5F14 /* SimoneFabButton.swift */,
+				B39E051C1F6ACB62009B5F14 /* SimoneConcreteSegueProtocol.swift */,
+				B39E05181F6AC960009B5F14 /* SimoneSegue.swift */,
+				B39E051A1F6ACB2E009B5F14 /* SimoneSegueLeftToRight.swift */,
+				B39E051E1F6AD319009B5F14 /* SimoneSegueRightToLeft.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
+		B39E05241F6B0308009B5F14 /* Easy */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Easy;
+			sourceTree = "<group>";
+		};
+		B39E05251F6B030D009B5F14 /* Hard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Hard;
+			sourceTree = "<group>";
+		};
+		B39E05281F6B0C9E009B5F14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B39E05251F6B030D009B5F14 /* Hard */,
+				B39E05241F6B0308009B5F14 /* Easy */,
+				B39E05131F6AC51B009B5F14 /* SinglePlayerModeViewController.swift */,
+				B39E05261F6B057C009B5F14 /* SinglePlayerBaseViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B39E05291F6B0CA7009B5F14 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B39E05221F6B02EC009B5F14 /* Enums.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B39E052A1F6B0CAB009B5F14 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B39E052B1F6B0CE4009B5F14 /* CPUActor.swift */,
+				B38CEFCB1F6EA8A0006AA751 /* GameViewActor.swift */,
+				B38CEFE11F6EB7FD006AA751 /* GameViewPresenter.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B39E05301F6B2227009B5F14 /* Messages */ = {
+			isa = PBXGroup;
+			children = (
+				B38CEFE31F6EB8AC006AA751 /* Message.swift */,
+				B31B73A81F6DD37100B99B24 /* MStartGameVsCpu.swift */,
+				B31B73AA1F6DD50900B99B24 /* MGimmeNewColor.swift */,
+				B38CEFCF1F6EAB9D006AA751 /* MAttachPresenter.swift */,
+				B38CEFD71F6EAEE1006AA751 /* MTimeToBlink.swift */,
+				B38CEFD91F6EAF0B006AA751 /* MNextColor.swift */,
+				B38CEFDB1F6EAF43006AA751 /* MPlayerTurn.swift */,
+				B38CEFDD1F6EB371006AA751 /* MGuessColor.swift */,
+				B38CEFDF1F6EB717006AA751 /* MPause.swift */,
+			);
+			path = Messages;
+			sourceTree = "<group>";
+		};
+		B3DC13B71F6888C2000C2B5C = {
+			isa = PBXGroup;
+			children = (
+				B3DC13C21F6888C2000C2B5C /* Simone */,
+				B3DC13D71F6888C2000C2B5C /* SimoneTests */,
+				B3DC13E21F6888C2000C2B5C /* SimoneUITests */,
+				B3DC13C11F6888C2000C2B5C /* Products */,
+				9D53831BF649CF35E9C36E34 /* Pods */,
+				D3E5809879836AE004A48FD3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B3DC13C11F6888C2000C2B5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3DC13C01F6888C2000C2B5C /* Simone.app */,
+				B3DC13D41F6888C2000C2B5C /* SimoneTests.xctest */,
+				B3DC13DF1F6888C2000C2B5C /* SimoneUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B3DC13C21F6888C2000C2B5C /* Simone */ = {
+			isa = PBXGroup;
+			children = (
+				B3DC13F81F688A49000C2B5C /* Resources */,
+				B3DC13F61F688A21000C2B5C /* Shared */,
+				B3DC13F51F688A1B000C2B5C /* Scoreboard */,
+				B3DC13F41F688A17000C2B5C /* Settings */,
+				B3DC13F31F688A11000C2B5C /* MultiPlayer */,
+				B3DC13F21F688A08000C2B5C /* SinglePlayer */,
+				B3DC13CC1F6888C2000C2B5C /* LaunchScreen.storyboard */,
+				B3DC13CF1F6888C2000C2B5C /* Info.plist */,
+				B39E052D1F6B0D1B009B5F14 /* BridgingHeader.h */,
+			);
+			path = Simone;
+			sourceTree = "<group>";
+		};
+		B3DC13D71F6888C2000C2B5C /* SimoneTests */ = {
+			isa = PBXGroup;
+			children = (
+				B3DC13D81F6888C2000C2B5C /* SimoneTests.swift */,
+				B3DC13DA1F6888C2000C2B5C /* Info.plist */,
+				B38CEFD41F6EADEE006AA751 /* GameViewActorTests.swift */,
+			);
+			path = SimoneTests;
+			sourceTree = "<group>";
+		};
+		B3DC13E21F6888C2000C2B5C /* SimoneUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B3DC13E31F6888C2000C2B5C /* SimoneUITests.swift */,
+				B3DC13E51F6888C2000C2B5C /* Info.plist */,
+			);
+			path = SimoneUITests;
+			sourceTree = "<group>";
+		};
+		B3DC13F21F688A08000C2B5C /* SinglePlayer */ = {
+			isa = PBXGroup;
+			children = (
+				B39E05301F6B2227009B5F14 /* Messages */,
+				B39E052A1F6B0CAB009B5F14 /* Controller */,
+				B39E05291F6B0CA7009B5F14 /* Model */,
+				B39E05281F6B0C9E009B5F14 /* View */,
+			);
+			path = SinglePlayer;
+			sourceTree = "<group>";
+		};
+		B3DC13F31F688A11000C2B5C /* MultiPlayer */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MultiPlayer;
+			sourceTree = "<group>";
+		};
+		B3DC13F41F688A17000C2B5C /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		B3DC13F51F688A1B000C2B5C /* Scoreboard */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scoreboard;
+			sourceTree = "<group>";
+		};
+		B3DC13F61F688A21000C2B5C /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				B38CEFD11F6EAD4B006AA751 /* Utils */,
+				B39E05151F6AC539009B5F14 /* Controls */,
+				B3DC13F11F6888F0000C2B5C /* Main.storyboard */,
+				B3DC13C31F6888C2000C2B5C /* AppDelegate.swift */,
+				B3DC13F71F688A35000C2B5C /* Main */,
+				B39E052E1F6B142E009B5F14 /* SimoneColor.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		B3DC13F71F688A35000C2B5C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B3DC13F91F688B4A000C2B5C /* SquaredViewController.swift */,
+				B3DC13FB1F688B76000C2B5C /* SquaredViewProtocol.swift */,
+				B3DC13FD1F68948A000C2B5C /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B3DC13F81F688A49000C2B5C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B3DC13CA1F6888C2000C2B5C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D3E5809879836AE004A48FD3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				89F3F4F911AFF18F7904797B /* Pods_ASimone_Simone.framework */,
+				610D6598E35EA823B05C33FE /* Pods_ASimone_SimoneTests.framework */,
+				29358549C3758BEDBC6C46CC /* Pods_ASimone_SimoneUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B3DC13BF1F6888C2000C2B5C /* Simone */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3DC13E81F6888C2000C2B5C /* Build configuration list for PBXNativeTarget "Simone" */;
+			buildPhases = (
+				AA6FCFF977D0F3C09EE6B2A5 /* [CP] Check Pods Manifest.lock */,
+				B3DC13BC1F6888C2000C2B5C /* Sources */,
+				B3DC13BD1F6888C2000C2B5C /* Frameworks */,
+				B3DC13BE1F6888C2000C2B5C /* Resources */,
+				F75DBE4A751540406A89571D /* [CP] Embed Pods Frameworks */,
+				8DC655110CF2A3DA24474365 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Simone;
+			productName = Simone;
+			productReference = B3DC13C01F6888C2000C2B5C /* Simone.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B3DC13D31F6888C2000C2B5C /* SimoneTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3DC13EB1F6888C2000C2B5C /* Build configuration list for PBXNativeTarget "SimoneTests" */;
+			buildPhases = (
+				A26DA2F8CF8E7AEE3801DAE4 /* [CP] Check Pods Manifest.lock */,
+				B3DC13D01F6888C2000C2B5C /* Sources */,
+				B3DC13D11F6888C2000C2B5C /* Frameworks */,
+				B3DC13D21F6888C2000C2B5C /* Resources */,
+				67087059496CD15D85BDE4AA /* [CP] Embed Pods Frameworks */,
+				CC867D8F5CA7E0163C8DD29A /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3DC13D61F6888C2000C2B5C /* PBXTargetDependency */,
+			);
+			name = SimoneTests;
+			productName = SimoneTests;
+			productReference = B3DC13D41F6888C2000C2B5C /* SimoneTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B3DC13DE1F6888C2000C2B5C /* SimoneUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B3DC13EE1F6888C2000C2B5C /* Build configuration list for PBXNativeTarget "SimoneUITests" */;
+			buildPhases = (
+				8145D60C5EEB3650E70976A0 /* [CP] Check Pods Manifest.lock */,
+				B3DC13DB1F6888C2000C2B5C /* Sources */,
+				B3DC13DC1F6888C2000C2B5C /* Frameworks */,
+				B3DC13DD1F6888C2000C2B5C /* Resources */,
+				0D55FC23C732C6A9F9EA6E62 /* [CP] Embed Pods Frameworks */,
+				D2D42115681578B37F37CDC5 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B3DC13E11F6888C2000C2B5C /* PBXTargetDependency */,
+			);
+			name = SimoneUITests;
+			productName = SimoneUITests;
+			productReference = B3DC13DF1F6888C2000C2B5C /* SimoneUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B3DC13B81F6888C2000C2B5C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0900;
+				LastUpgradeCheck = 0900;
+				ORGANIZATIONNAME = "Simone Games, Inc.";
+				TargetAttributes = {
+					B3DC13BF1F6888C2000C2B5C = {
+						CreatedOnToolsVersion = 9.0;
+					};
+					B3DC13D31F6888C2000C2B5C = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = B3DC13BF1F6888C2000C2B5C;
+					};
+					B3DC13DE1F6888C2000C2B5C = {
+						CreatedOnToolsVersion = 9.0;
+						TestTargetID = B3DC13BF1F6888C2000C2B5C;
+					};
+				};
+			};
+			buildConfigurationList = B3DC13BB1F6888C2000C2B5C /* Build configuration list for PBXProject "Simone" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B3DC13B71F6888C2000C2B5C;
+			productRefGroup = B3DC13C11F6888C2000C2B5C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B3DC13BF1F6888C2000C2B5C /* Simone */,
+				B3DC13D31F6888C2000C2B5C /* SimoneTests */,
+				B3DC13DE1F6888C2000C2B5C /* SimoneUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B3DC13BE1F6888C2000C2B5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3ED62521F68A610001B6383 /* Main.storyboard in Resources */,
+				B3DC13CE1F6888C2000C2B5C /* LaunchScreen.storyboard in Resources */,
+				B3DC13CB1F6888C2000C2B5C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3DC13D21F6888C2000C2B5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3DC13DD1F6888C2000C2B5C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0D55FC23C732C6A9F9EA6E62 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASimone-SimoneUITests/Pods-ASimone-SimoneUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		67087059496CD15D85BDE4AA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASimone-SimoneTests/Pods-ASimone-SimoneTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8145D60C5EEB3650E70976A0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8DC655110CF2A3DA24474365 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASimone-Simone/Pods-ASimone-Simone-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A26DA2F8CF8E7AEE3801DAE4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		AA6FCFF977D0F3C09EE6B2A5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CC867D8F5CA7E0163C8DD29A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASimone-SimoneTests/Pods-ASimone-SimoneTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D2D42115681578B37F37CDC5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASimone-SimoneUITests/Pods-ASimone-SimoneUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F75DBE4A751540406A89571D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ASimone-Simone/Pods-ASimone-Simone-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B3DC13BC1F6888C2000C2B5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B39E05271F6B057C009B5F14 /* SinglePlayerBaseViewController.swift in Sources */,
+				B38CEFD01F6EAB9D006AA751 /* MAttachPresenter.swift in Sources */,
+				B38CEFE01F6EB717006AA751 /* MPause.swift in Sources */,
+				B3DC13FA1F688B4A000C2B5C /* SquaredViewController.swift in Sources */,
+				B38CEFE21F6EB7FD006AA751 /* GameViewPresenter.swift in Sources */,
+				B38CEFDC1F6EAF43006AA751 /* MPlayerTurn.swift in Sources */,
+				B39E05141F6AC51B009B5F14 /* SinglePlayerModeViewController.swift in Sources */,
+				B38CEFD81F6EAEE1006AA751 /* MTimeToBlink.swift in Sources */,
+				B3DC13FC1F688B76000C2B5C /* SquaredViewProtocol.swift in Sources */,
+				B38CEFE41F6EB8AC006AA751 /* Message.swift in Sources */,
+				B31B73AB1F6DD50900B99B24 /* MGimmeNewColor.swift in Sources */,
+				B39E05231F6B02EC009B5F14 /* Enums.swift in Sources */,
+				B31B73A91F6DD37100B99B24 /* MStartGameVsCpu.swift in Sources */,
+				B3DC13C41F6888C2000C2B5C /* AppDelegate.swift in Sources */,
+				B38CEFD31F6EAD5C006AA751 /* PowerUpInt.swift in Sources */,
+				B39E05171F6AC550009B5F14 /* SimoneFabButton.swift in Sources */,
+				B39E051F1F6AD319009B5F14 /* SimoneSegueRightToLeft.swift in Sources */,
+				B3DC13FE1F68948A000C2B5C /* MainViewController.swift in Sources */,
+				B39E05191F6AC960009B5F14 /* SimoneSegue.swift in Sources */,
+				B38CEFDA1F6EAF0B006AA751 /* MNextColor.swift in Sources */,
+				B39E052F1F6B142E009B5F14 /* SimoneColor.swift in Sources */,
+				B39E052C1F6B0CE4009B5F14 /* CPUActor.swift in Sources */,
+				B38CEFCC1F6EA8A0006AA751 /* GameViewActor.swift in Sources */,
+				B38CEFDE1F6EB371006AA751 /* MGuessColor.swift in Sources */,
+				B39E051D1F6ACB62009B5F14 /* SimoneConcreteSegueProtocol.swift in Sources */,
+				B39E051B1F6ACB2E009B5F14 /* SimoneSegueLeftToRight.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3DC13D01F6888C2000C2B5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B38CEFD51F6EADEE006AA751 /* GameViewActorTests.swift in Sources */,
+				B3DC13D91F6888C2000C2B5C /* SimoneTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B3DC13DB1F6888C2000C2B5C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3DC13E41F6888C2000C2B5C /* SimoneUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B3DC13D61F6888C2000C2B5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3DC13BF1F6888C2000C2B5C /* Simone */;
+			targetProxy = B3DC13D51F6888C2000C2B5C /* PBXContainerItemProxy */;
+		};
+		B3DC13E11F6888C2000C2B5C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B3DC13BF1F6888C2000C2B5C /* Simone */;
+			targetProxy = B3DC13E01F6888C2000C2B5C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B3DC13CC1F6888C2000C2B5C /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B3DC13CD1F6888C2000C2B5C /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B3DC13E61F6888C2000C2B5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B3DC13E71F6888C2000C2B5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B3DC13E91F6888C2000C2B5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C6A87D9B2186EC08DE27BA0 /* Pods-ASimone-Simone.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C8D6ZTZR83;
+				INFOPLIST_FILE = Simone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = app.simone.Simone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Simone/BridgingHeader.h;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		B3DC13EA1F6888C2000C2B5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CDB3A7A2529D7388D05BB6C5 /* Pods-ASimone-Simone.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = C8D6ZTZR83;
+				INFOPLIST_FILE = Simone/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = app.simone.Simone;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = Simone/BridgingHeader.h;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		B3DC13EC1F6888C2000C2B5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DA708409704137088B002C8 /* Pods-ASimone-SimoneTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = C8D6ZTZR83;
+				INFOPLIST_FILE = SimoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = app.simone.SimoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simone.app/Simone";
+			};
+			name = Debug;
+		};
+		B3DC13ED1F6888C2000C2B5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C59BFDD07F8A8564568768A /* Pods-ASimone-SimoneTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = C8D6ZTZR83;
+				INFOPLIST_FILE = SimoneTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = app.simone.SimoneTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Simone.app/Simone";
+			};
+			name = Release;
+		};
+		B3DC13EF1F6888C2000C2B5C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B0CD2F467D2E34CFA5D57FD4 /* Pods-ASimone-SimoneUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = C8D6ZTZR83;
+				INFOPLIST_FILE = SimoneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = app.simone.SimoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Simone;
+			};
+			name = Debug;
+		};
+		B3DC13F01F6888C2000C2B5C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BB20E17F6B0FC925A925916 /* Pods-ASimone-SimoneUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = C8D6ZTZR83;
+				INFOPLIST_FILE = SimoneUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = app.simone.SimoneUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Simone;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B3DC13BB1F6888C2000C2B5C /* Build configuration list for PBXProject "Simone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3DC13E61F6888C2000C2B5C /* Debug */,
+				B3DC13E71F6888C2000C2B5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3DC13E81F6888C2000C2B5C /* Build configuration list for PBXNativeTarget "Simone" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3DC13E91F6888C2000C2B5C /* Debug */,
+				B3DC13EA1F6888C2000C2B5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3DC13EB1F6888C2000C2B5C /* Build configuration list for PBXNativeTarget "SimoneTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3DC13EC1F6888C2000C2B5C /* Debug */,
+				B3DC13ED1F6888C2000C2B5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B3DC13EE1F6888C2000C2B5C /* Build configuration list for PBXNativeTarget "SimoneUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B3DC13EF1F6888C2000C2B5C /* Debug */,
+				B3DC13F01F6888C2000C2B5C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B3DC13B81F6888C2000C2B5C /* Project object */;
+}
