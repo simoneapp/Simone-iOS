@@ -14,7 +14,7 @@ protocol GameViewActorProtocol {
     func attachPresenter(_ message: Message)
     func sendBeginMessage(_ message: Message)
     func timeToBlink(_ message: Message)
-    func nextColor(_ message: Message)
+    func nextColor()
     func handlePlayerTurn(_ message: Message)
     func guessColor(_ message: Message)
     func pause(_ message: Message)
@@ -45,7 +45,7 @@ class GameViewActor: OSActor, GameViewActorProtocol {
         }
         
         on(MNextColor.self) { (result) -> Any? in
-            return self.nextColor(result as! Message)
+            return self.nextColor()
         }
         
         on(MPlayerTurn.self) { (result) -> Any? in
@@ -71,7 +71,7 @@ class GameViewActor: OSActor, GameViewActorProtocol {
     }
     
     func sendBeginMessage(_ message: Message) {
-        //Redirect message to CPU Actor
+        sendToCpuActor(message: message)
     }
     
     /**
@@ -88,6 +88,8 @@ class GameViewActor: OSActor, GameViewActorProtocol {
             cpuSequence = sequence
         }
         
+        nextColor()
+        
         //currentSender.tell(new TestMessage(), self());
         //getSelf().tell(new NextColorMsg(), currentSender);
     }
@@ -95,7 +97,7 @@ class GameViewActor: OSActor, GameViewActorProtocol {
     /**
      * Next color to blink, if the index is = size --> Player turn
      */
-    func nextColor(_ message: Message) {
+    func nextColor() {
         
         if paused { return }
         
@@ -140,8 +142,7 @@ class GameViewActor: OSActor, GameViewActorProtocol {
                 if cpuSequence.count - playerSequence.count == 0 {
                     
                     presenter?.changeTurn(.cpu, sequenceIndex: playerIndex)
-                    
-                    //Send gimmenewcolor to gameviewactor - TODO!
+                    sendToCpuActor(message: MGimmeNewColor())
                     playerSequence.removeAll()
                 }
                 
@@ -162,11 +163,17 @@ class GameViewActor: OSActor, GameViewActorProtocol {
         paused = message.isPausing
         
         if !paused {
-            //send NextColorMsg to CPUActor - TODO!
+            sendToCpuActor(message: MNextColor())
         }
     }
     
     private func blink(color : SimoneColorEnum) {
         presenter?.blinkDelayed(turn: .cpu, color: color)
-    }    
+    }
+    
+    private func sendToCpuActor(message: Message) {
+        let system = ActorSystemManager.manager.system
+        let actor = system?.actor(of: CPUActor.self, caller: self)
+        actor?.tell(message)
+    }
 }

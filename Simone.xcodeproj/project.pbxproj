@@ -11,6 +11,7 @@
 		A5A2B132FCAE6BE962A15BA3 /* Pods_ASimone_Simone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F3F4F911AFF18F7904797B /* Pods_ASimone_Simone.framework */; };
 		B31B73A91F6DD37100B99B24 /* MStartGameVsCpu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31B73A81F6DD37100B99B24 /* MStartGameVsCpu.swift */; };
 		B31B73AB1F6DD50900B99B24 /* MGimmeNewColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31B73AA1F6DD50900B99B24 /* MGimmeNewColor.swift */; };
+		B3201D7D1F75BEE400C1CD83 /* ActorSystemManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3201D7C1F75BEE400C1CD83 /* ActorSystemManager.swift */; };
 		B38CEFCC1F6EA8A0006AA751 /* GameViewActor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CEFCB1F6EA8A0006AA751 /* GameViewActor.swift */; };
 		B38CEFD01F6EAB9D006AA751 /* MAttachPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CEFCF1F6EAB9D006AA751 /* MAttachPresenter.swift */; };
 		B38CEFD31F6EAD5C006AA751 /* PowerUpInt.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38CEFD21F6EAD5C006AA751 /* PowerUpInt.swift */; };
@@ -72,6 +73,7 @@
 		B0CD2F467D2E34CFA5D57FD4 /* Pods-ASimone-SimoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASimone-SimoneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASimone-SimoneUITests/Pods-ASimone-SimoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B31B73A81F6DD37100B99B24 /* MStartGameVsCpu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStartGameVsCpu.swift; sourceTree = "<group>"; };
 		B31B73AA1F6DD50900B99B24 /* MGimmeNewColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MGimmeNewColor.swift; sourceTree = "<group>"; };
+		B3201D7C1F75BEE400C1CD83 /* ActorSystemManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActorSystemManager.swift; sourceTree = "<group>"; };
 		B38CEFCB1F6EA8A0006AA751 /* GameViewActor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewActor.swift; sourceTree = "<group>"; };
 		B38CEFCF1F6EAB9D006AA751 /* MAttachPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MAttachPresenter.swift; sourceTree = "<group>"; };
 		B38CEFD21F6EAD5C006AA751 /* PowerUpInt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerUpInt.swift; sourceTree = "<group>"; };
@@ -157,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				B38CEFD21F6EAD5C006AA751 /* PowerUpInt.swift */,
+				B3201D7C1F75BEE400C1CD83 /* ActorSystemManager.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -647,6 +650,7 @@
 				B38CEFE21F6EB7FD006AA751 /* GameViewPresenter.swift in Sources */,
 				B38CEFDC1F6EAF43006AA751 /* MPlayerTurn.swift in Sources */,
 				B39E05141F6AC51B009B5F14 /* SinglePlayerModeViewController.swift in Sources */,
+				B3201D7D1F75BEE400C1CD83 /* ActorSystemManager.swift in Sources */,
 				B38CEFD81F6EAEE1006AA751 /* MTimeToBlink.swift in Sources */,
 				B3DC13FC1F688B76000C2B5C /* SquaredViewProtocol.swift in Sources */,
 				B38CEFE41F6EB8AC006AA751 /* Message.swift in Sources */,

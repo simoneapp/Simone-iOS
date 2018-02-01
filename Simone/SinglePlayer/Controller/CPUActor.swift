@@ -37,26 +37,7 @@ class CPUActor: OSActor {
     
     func generateAndSendColor() {
         sequence.append(SimoneColorEnum.all[SimoneColorEnum.all.count.randomInto()])
+        //TODO send color
     }
     
-    
-
-    /*
- Then override -setup:, define what kind of messeges actor can accept and provide reactions for them:
- 
- - (void)setup {
- [self on:[THLogin class] doFuture:^RXPromise *(THLogin *message) {
- return [self askSession:message.email password:message.password];
- }];
- 
- [self on:[THLogout class] _do:^(id o) {
- [self.sessionStorage clear];
- }];
- }
- There 3 types of reactions to message:
- 
- void - just do work, return nothing;
- result - return result immediately;
- future - return future object - useful for async tasks, or then message is redirected to another actor.
- */
 }
