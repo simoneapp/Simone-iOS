@@ -65,12 +65,12 @@ class GameViewActor: OSActor, GameViewActorProtocol {
      * Received MAttachPresenter from GameViewControllerPresenter
      * @param message
      */
-    func attachPresenter(_ message: Message) {
+    internal func attachPresenter(_ message: Message) {
         guard let message = message as? MAttachPresenter else { return }
         presenter = message.presenter
     }
     
-    func sendBeginMessage(_ message: Message) {
+    internal func sendBeginMessage(_ message: Message) {
         sendToCpuActor(message: message)
     }
     
@@ -78,7 +78,7 @@ class GameViewActor: OSActor, GameViewActorProtocol {
      * Time to blink the cpuSequence until it's over
      * @param message
      */
-    func timeToBlink(_ message: Message) {
+    internal func timeToBlink(_ message: Message) {
         guard let message = message as? MTimeToBlink else { return }
         cpuIndex = 0
         paused = false
@@ -89,21 +89,23 @@ class GameViewActor: OSActor, GameViewActorProtocol {
         }
         
         nextColor()
-        
-        //currentSender.tell(new TestMessage(), self());
+        //should be changed to ?
         //getSelf().tell(new NextColorMsg(), currentSender);
     }
     
     /**
      * Next color to blink, if the index is = size --> Player turn
      */
-    func nextColor() {
+    internal func nextColor() {
         
         if paused { return }
         
         if cpuIndex >= cpuSequence.count {
             playerTurn = true
-            handlePlayerTurn(MPlayerTurn()) //to do with actors here
+            //handlePlayerTurn(MPlayerTurn())
+            actorSystem.actor(of: GameViewActor.self, caller: self).tell(MPlayerTurn())
+            //to do with actors here
+            // getSelf().tell(playerTurnMsg, getSelf());
         } else {
             blink(color: cpuSequence[cpuIndex])
             cpuIndex += 1
@@ -113,7 +115,7 @@ class GameViewActor: OSActor, GameViewActorProtocol {
     /**
      * Player turn, msg to the public handler of GameViewPresenter
      */
-    func handlePlayerTurn(_ message: Message) {
+    internal func handlePlayerTurn(_ message: Message) {
         playerIndex = 0
         playerSequence.removeAll()
         presenter?.changeTurn(.player, sequenceIndex: cpuSequence.count - 1)
@@ -123,7 +125,7 @@ class GameViewActor: OSActor, GameViewActorProtocol {
      * Check of the color guessed by the player
      * @param message
      */
-    func guessColor(_ message: Message) {
+    internal func guessColor(_ message: Message) {
         
         guard let message = message as? MGuessColor else { return }
         guard playerTurn else { return }
@@ -158,7 +160,7 @@ class GameViewActor: OSActor, GameViewActorProtocol {
         }
     }
     
-    func pause(_ message: Message) {
+    internal func pause(_ message: Message) {
         guard let message = message as? MPause else { return }
         paused = message.isPausing
         

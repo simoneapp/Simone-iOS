@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7C401B09202C917500B4B009 /* SimoneSegueTopToBottom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C401B08202C917500B4B009 /* SimoneSegueTopToBottom.swift */; };
+		7C401B0B202C918000B4B009 /* SimoneSegueBottomToTop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C401B0A202C918000B4B009 /* SimoneSegueBottomToTop.swift */; };
+		7C401B0D202C92AA00B4B009 /* MultiPlayerComingSoonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C401B0C202C92AA00B4B009 /* MultiPlayerComingSoonViewController.swift */; };
+		7C401B13202CA6A300B4B009 /* UIColor+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C401B12202CA6A300B4B009 /* UIColor+Hex.swift */; };
+		7CEC9D76202CA85400966A3A /* SColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CEC9D75202CA85400966A3A /* SColors.swift */; };
 		8CA170C0C813468B20572E9F /* Pods_ASimone_SimoneTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 610D6598E35EA823B05C33FE /* Pods_ASimone_SimoneTests.framework */; };
 		A5A2B132FCAE6BE962A15BA3 /* Pods_ASimone_Simone.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89F3F4F911AFF18F7904797B /* Pods_ASimone_Simone.framework */; };
 		B31B73A91F6DD37100B99B24 /* MStartGameVsCpu.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31B73A81F6DD37100B99B24 /* MStartGameVsCpu.swift */; };
@@ -69,6 +74,11 @@
 		610D6598E35EA823B05C33FE /* Pods_ASimone_SimoneTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASimone_SimoneTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C59BFDD07F8A8564568768A /* Pods-ASimone-SimoneTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASimone-SimoneTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASimone-SimoneTests/Pods-ASimone-SimoneTests.release.xcconfig"; sourceTree = "<group>"; };
 		7BB20E17F6B0FC925A925916 /* Pods-ASimone-SimoneUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASimone-SimoneUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-ASimone-SimoneUITests/Pods-ASimone-SimoneUITests.release.xcconfig"; sourceTree = "<group>"; };
+		7C401B08202C917500B4B009 /* SimoneSegueTopToBottom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoneSegueTopToBottom.swift; sourceTree = "<group>"; };
+		7C401B0A202C918000B4B009 /* SimoneSegueBottomToTop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimoneSegueBottomToTop.swift; sourceTree = "<group>"; };
+		7C401B0C202C92AA00B4B009 /* MultiPlayerComingSoonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MultiPlayerComingSoonViewController.swift; path = Simone/Shared/Controls/MultiPlayerComingSoonViewController.swift; sourceTree = SOURCE_ROOT; };
+		7C401B12202CA6A300B4B009 /* UIColor+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Hex.swift"; sourceTree = "<group>"; };
+		7CEC9D75202CA85400966A3A /* SColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SColors.swift; sourceTree = "<group>"; };
 		89F3F4F911AFF18F7904797B /* Pods_ASimone_Simone.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ASimone_Simone.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0CD2F467D2E34CFA5D57FD4 /* Pods-ASimone-SimoneUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ASimone-SimoneUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ASimone-SimoneUITests/Pods-ASimone-SimoneUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B31B73A81F6DD37100B99B24 /* MStartGameVsCpu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MStartGameVsCpu.swift; sourceTree = "<group>"; };
@@ -160,6 +170,7 @@
 			children = (
 				B38CEFD21F6EAD5C006AA751 /* PowerUpInt.swift */,
 				B3201D7C1F75BEE400C1CD83 /* ActorSystemManager.swift */,
+				7C401B12202CA6A300B4B009 /* UIColor+Hex.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -172,29 +183,15 @@
 				B39E05181F6AC960009B5F14 /* SimoneSegue.swift */,
 				B39E051A1F6ACB2E009B5F14 /* SimoneSegueLeftToRight.swift */,
 				B39E051E1F6AD319009B5F14 /* SimoneSegueRightToLeft.swift */,
+				7C401B08202C917500B4B009 /* SimoneSegueTopToBottom.swift */,
+				7C401B0A202C918000B4B009 /* SimoneSegueBottomToTop.swift */,
 			);
 			path = Controls;
-			sourceTree = "<group>";
-		};
-		B39E05241F6B0308009B5F14 /* Easy */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Easy;
-			sourceTree = "<group>";
-		};
-		B39E05251F6B030D009B5F14 /* Hard */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Hard;
 			sourceTree = "<group>";
 		};
 		B39E05281F6B0C9E009B5F14 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				B39E05251F6B030D009B5F14 /* Hard */,
-				B39E05241F6B0308009B5F14 /* Easy */,
 				B39E05131F6AC51B009B5F14 /* SinglePlayerModeViewController.swift */,
 				B39E05261F6B057C009B5F14 /* SinglePlayerBaseViewController.swift */,
 			);
@@ -306,6 +303,7 @@
 		B3DC13F31F688A11000C2B5C /* MultiPlayer */ = {
 			isa = PBXGroup;
 			children = (
+				7C401B0C202C92AA00B4B009 /* MultiPlayerComingSoonViewController.swift */,
 			);
 			path = MultiPlayer;
 			sourceTree = "<group>";
@@ -333,6 +331,7 @@
 				B3DC13C31F6888C2000C2B5C /* AppDelegate.swift */,
 				B3DC13F71F688A35000C2B5C /* Main */,
 				B39E052E1F6B142E009B5F14 /* SimoneColor.swift */,
+				7CEC9D75202CA85400966A3A /* SColors.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -507,9 +506,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ASimone-SimoneUITests/Pods-ASimone-SimoneUITests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Oscar/Oscar.framework",
+				"${BUILT_PRODUCTS_DIR}/RXPromise/RXPromise.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Oscar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RXPromise.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -522,9 +530,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ASimone-SimoneTests/Pods-ASimone-SimoneTests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Oscar/Oscar.framework",
+				"${BUILT_PRODUCTS_DIR}/RXPromise/RXPromise.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Oscar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RXPromise.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -537,13 +554,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ASimone-SimoneUITests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		8DC655110CF2A3DA24474365 /* [CP] Copy Pods Resources */ = {
@@ -567,13 +587,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ASimone-SimoneTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		AA6FCFF977D0F3C09EE6B2A5 /* [CP] Check Pods Manifest.lock */ = {
@@ -582,13 +605,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ASimone-Simone-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		CC867D8F5CA7E0163C8DD29A /* [CP] Copy Pods Resources */ = {
@@ -627,9 +653,18 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ASimone-Simone/Pods-ASimone-Simone-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaLumberjack/CocoaLumberjack.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Oscar/Oscar.framework",
+				"${BUILT_PRODUCTS_DIR}/RXPromise/RXPromise.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaLumberjack.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Oscar.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RXPromise.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -649,10 +684,13 @@
 				B3DC13FA1F688B4A000C2B5C /* SquaredViewController.swift in Sources */,
 				B38CEFE21F6EB7FD006AA751 /* GameViewPresenter.swift in Sources */,
 				B38CEFDC1F6EAF43006AA751 /* MPlayerTurn.swift in Sources */,
+				7C401B09202C917500B4B009 /* SimoneSegueTopToBottom.swift in Sources */,
+				7C401B0B202C918000B4B009 /* SimoneSegueBottomToTop.swift in Sources */,
 				B39E05141F6AC51B009B5F14 /* SinglePlayerModeViewController.swift in Sources */,
 				B3201D7D1F75BEE400C1CD83 /* ActorSystemManager.swift in Sources */,
 				B38CEFD81F6EAEE1006AA751 /* MTimeToBlink.swift in Sources */,
 				B3DC13FC1F688B76000C2B5C /* SquaredViewProtocol.swift in Sources */,
+				7C401B13202CA6A300B4B009 /* UIColor+Hex.swift in Sources */,
 				B38CEFE41F6EB8AC006AA751 /* Message.swift in Sources */,
 				B31B73AB1F6DD50900B99B24 /* MGimmeNewColor.swift in Sources */,
 				B39E05231F6B02EC009B5F14 /* Enums.swift in Sources */,
@@ -666,7 +704,9 @@
 				B38CEFDA1F6EAF0B006AA751 /* MNextColor.swift in Sources */,
 				B39E052F1F6B142E009B5F14 /* SimoneColor.swift in Sources */,
 				B39E052C1F6B0CE4009B5F14 /* CPUActor.swift in Sources */,
+				7C401B0D202C92AA00B4B009 /* MultiPlayerComingSoonViewController.swift in Sources */,
 				B38CEFCC1F6EA8A0006AA751 /* GameViewActor.swift in Sources */,
+				7CEC9D76202CA85400966A3A /* SColors.swift in Sources */,
 				B38CEFDE1F6EB371006AA751 /* MGuessColor.swift in Sources */,
 				B39E051D1F6ACB62009B5F14 /* SimoneConcreteSegueProtocol.swift in Sources */,
 				B39E051B1F6ACB2E009B5F14 /* SimoneSegueLeftToRight.swift in Sources */,

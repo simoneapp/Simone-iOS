@@ -36,8 +36,11 @@ class CPUActor: OSActor {
     }
     
     func generateAndSendColor() {
+        guard let viewActor = actorSystem.actor(of: GameViewActor.self, caller: self)
+            else { return }
+        
         sequence.append(SimoneColorEnum.all[SimoneColorEnum.all.count.randomInto()])
-        //TODO send color
+        viewActor.tell(MTimeToBlink(sequence: sequence))
     }
     
 }

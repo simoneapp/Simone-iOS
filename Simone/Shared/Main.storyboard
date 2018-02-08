@@ -4,7 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -42,6 +42,9 @@
                                 <state key="normal" title="MULTIPLAYER">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="D0P-0b-IcG" kind="custom" customClass="SimoneSegueTopToBottom" customModule="Simone" customModuleProvider="target" id="FpT-QC-Oni"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KYo-kQ-gXj">
                                 <rect key="frame" x="0.0" y="406" width="187.66666666666666" height="372"/>
@@ -229,7 +232,7 @@ SWAP</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swipe right to get back" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0An-x8-HP4">
-                                <rect key="frame" x="24" y="110.33333333333334" width="179" height="19.333333333333343"/>
+                                <rect key="frame" x="24" y="110.33333333333333" width="179" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -291,6 +294,83 @@ SWAP</string>
                 </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1016.8" y="168.6656671664168"/>
+        </scene>
+        <!--Multi Player Coming Soon View Controller-->
+        <scene sceneID="bmx-c6-Y11">
+            <objects>
+                <viewController id="D0P-0b-IcG" customClass="MultiPlayerComingSoonViewController" customModule="Simone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dLS-kR-9ne">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Di0-v8-Y1T">
+                                <rect key="frame" x="0.0" y="0.0" width="187.66666666666666" height="812"/>
+                                <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="frK-Q2-5qm">
+                                <rect key="frame" x="187.66666666666663" y="0.0" width="187.33333333333337" height="812"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eYa-wg-sTj">
+                                <rect key="frame" x="67.666666666666671" y="355" width="238.66666666666663" height="102.33333333333331"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMING SOON" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpz-Ql-390">
+                                        <rect key="frame" x="0.0" y="0.0" width="238.66666666666666" height="38.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="32"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="swipe down to get back" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIX-TE-o0B">
+                                        <rect key="frame" x="0.0" y="82.333333333333314" width="238.66666666666666" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RIX-TE-o0B" secondAttribute="bottom" id="695-pG-egM"/>
+                                    <constraint firstItem="dpz-Ql-390" firstAttribute="top" secondItem="eYa-wg-sTj" secondAttribute="top" id="8yb-re-EpO"/>
+                                    <constraint firstItem="dpz-Ql-390" firstAttribute="leading" secondItem="eYa-wg-sTj" secondAttribute="leading" id="F9S-2E-eur"/>
+                                    <constraint firstAttribute="trailing" secondItem="dpz-Ql-390" secondAttribute="trailing" id="Szc-4B-QJN"/>
+                                    <constraint firstItem="RIX-TE-o0B" firstAttribute="leading" secondItem="eYa-wg-sTj" secondAttribute="leading" id="i6Z-Su-hwz"/>
+                                    <constraint firstAttribute="trailing" secondItem="RIX-TE-o0B" secondAttribute="trailing" id="owu-gm-UkG"/>
+                                    <constraint firstItem="RIX-TE-o0B" firstAttribute="top" secondItem="dpz-Ql-390" secondAttribute="bottom" constant="44" id="vP9-c3-kQs"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="frK-Q2-5qm" firstAttribute="leading" secondItem="Di0-v8-Y1T" secondAttribute="trailing" id="GB9-Vu-ecK"/>
+                            <constraint firstAttribute="bottom" secondItem="frK-Q2-5qm" secondAttribute="bottom" id="JU7-tW-IV6"/>
+                            <constraint firstItem="frK-Q2-5qm" firstAttribute="width" secondItem="Di0-v8-Y1T" secondAttribute="width" id="Qj4-bs-uSr"/>
+                            <constraint firstItem="eYa-wg-sTj" firstAttribute="centerX" secondItem="dLS-kR-9ne" secondAttribute="centerX" id="SWL-Mn-xSh"/>
+                            <constraint firstAttribute="bottom" secondItem="Di0-v8-Y1T" secondAttribute="bottom" id="Sol-0F-lzi"/>
+                            <constraint firstItem="Di0-v8-Y1T" firstAttribute="leading" secondItem="F5W-yc-rOR" secondAttribute="leading" id="aeC-wh-6eD"/>
+                            <constraint firstItem="frK-Q2-5qm" firstAttribute="top" secondItem="dLS-kR-9ne" secondAttribute="top" id="cvv-H5-85Y"/>
+                            <constraint firstItem="Di0-v8-Y1T" firstAttribute="top" secondItem="dLS-kR-9ne" secondAttribute="top" id="qVF-m1-eU7"/>
+                            <constraint firstItem="eYa-wg-sTj" firstAttribute="centerY" secondItem="dLS-kR-9ne" secondAttribute="centerY" id="ter-qS-U7c"/>
+                            <constraint firstItem="F5W-yc-rOR" firstAttribute="trailing" secondItem="frK-Q2-5qm" secondAttribute="trailing" id="z17-fz-kZK"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="F5W-yc-rOR"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="ZVK-Sk-pje" appends="YES" id="4yB-7k-yfG"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <segue destination="Pjb-Tt-0Tt" kind="unwind" identifier="unwindMultiPlayerMode" customClass="SimoneSegueBottomToTop" customModule="Simone" customModuleProvider="target" unwindAction="returnFromSegueWithSender:" id="muj-Mv-WlS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2hT-uK-cVi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Pjb-Tt-0Tt" userLabel="Exit" sceneMemberID="exit"/>
+                <swipeGestureRecognizer direction="up" id="ZVK-Sk-pje">
+                    <connections>
+                        <action selector="goBack" destination="D0P-0b-IcG" id="luJ-Xz-y67"/>
+                    </connections>
+                </swipeGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1017" y="913"/>
         </scene>
         <!--Single Player Base View Controller-->
         <scene sceneID="0DU-MU-zyu">
@@ -369,7 +449,7 @@ SWAP</string>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tap the central button to go back" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8iZ-p9-2oa">
-                                <rect key="frame" x="59" y="63.999999999999993" width="257" height="20.333333333333321"/>
+                                <rect key="frame" x="59" y="64" width="257" height="20.333333333333329"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
