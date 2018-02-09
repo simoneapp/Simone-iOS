@@ -439,6 +439,22 @@ SWAP</string>
                                     <action selector="goBack" destination="bAe-wg-uJ7" eventType="touchUpInside" id="ole-si-8vC"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5xX-zs-vNM" customClass="SimoneFabButton" customModule="Simone" customModuleProvider="target">
+                                <rect key="frame" x="47.666666666666657" y="196" width="80" height="80"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="GCd-nC-AvV"/>
+                                    <constraint firstAttribute="width" constant="80" id="yZu-B4-05c"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="black" pointSize="28"/>
+                                <size key="titleShadowOffset" width="0.0" height="6"/>
+                                <state key="normal" title="999">
+                                    <color key="titleColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack" destination="bAe-wg-uJ7" eventType="touchUpInside" id="cjo-fW-X7x"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="adR-ne-CQX">
                                 <rect key="frame" x="0.0" y="44" width="187.66666666666666" height="362"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -475,11 +491,13 @@ SWAP</string>
                             <constraint firstItem="adR-ne-CQX" firstAttribute="trailing" secondItem="Cyi-3x-NE9" secondAttribute="trailing" id="WTy-bz-bON"/>
                             <constraint firstItem="vY8-Ow-h9u" firstAttribute="height" secondItem="Cyi-3x-NE9" secondAttribute="height" id="WiP-cr-Pif"/>
                             <constraint firstItem="J4A-5V-1AI" firstAttribute="top" secondItem="863-ps-UFM" secondAttribute="top" id="XdN-ns-NaO"/>
+                            <constraint firstItem="5xX-zs-vNM" firstAttribute="centerX" secondItem="ADH-ih-GFH" secondAttribute="leading" id="ZzH-eF-2OQ"/>
                             <constraint firstItem="adR-ne-CQX" firstAttribute="top" secondItem="wLh-p7-uHg" secondAttribute="top" id="a3b-t6-xB6"/>
                             <constraint firstItem="Cyi-3x-NE9" firstAttribute="top" secondItem="ceE-Ba-e5u" secondAttribute="top" id="bhM-De-Zya"/>
                             <constraint firstItem="J4A-5V-1AI" firstAttribute="leading" secondItem="863-ps-UFM" secondAttribute="leading" id="dGJ-wv-bZF"/>
                             <constraint firstItem="adR-ne-CQX" firstAttribute="leading" secondItem="wLh-p7-uHg" secondAttribute="leading" id="dJd-W6-plT"/>
                             <constraint firstItem="863-ps-UFM" firstAttribute="height" secondItem="Cyi-3x-NE9" secondAttribute="height" id="dsP-hz-xVP"/>
+                            <constraint firstItem="ADH-ih-GFH" firstAttribute="top" secondItem="5xX-zs-vNM" secondAttribute="bottom" constant="30" id="dvi-he-ovM"/>
                             <constraint firstItem="ADH-ih-GFH" firstAttribute="centerY" secondItem="ceE-Ba-e5u" secondAttribute="centerY" id="eKT-6z-oy8"/>
                             <constraint firstItem="863-ps-UFM" firstAttribute="top" secondItem="vY8-Ow-h9u" secondAttribute="bottom" id="fdc-Pa-S6k"/>
                             <constraint firstItem="kN3-zw-YRP" firstAttribute="trailing" secondItem="Mg7-Oa-gDB" secondAttribute="trailing" id="fnj-IF-RNb"/>
@@ -503,7 +521,9 @@ SWAP</string>
                         <outlet property="btnFourth" destination="J4A-5V-1AI" id="jG0-LJ-tbk"/>
                         <outlet property="btnSecond" destination="h0n-Z7-8VS" id="aIk-JZ-E64"/>
                         <outlet property="btnThird" destination="kN3-zw-YRP" id="zj1-tj-3Rk"/>
+                        <outlet property="centralFab" destination="ADH-ih-GFH" id="crN-CJ-b6R"/>
                         <outlet property="lblGoBack" destination="8iZ-p9-2oa" id="fjs-Bn-oeH"/>
+                        <outlet property="scoreButton" destination="5xX-zs-vNM" id="FSi-tf-4cF"/>
                         <segue destination="8M7-OU-YNf" kind="unwind" identifier="unwindSinglePlayer" customClass="SimoneSegueLeftToRight" customModule="Simone" customModuleProvider="target" unwindAction="returnFromSegueWithSender:" id="6dA-Rb-3J5"/>
                     </connections>
                 </viewController>

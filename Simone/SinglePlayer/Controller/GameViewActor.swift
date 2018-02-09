@@ -61,6 +61,10 @@ class GameViewActor: OSActor, GameViewActorProtocol {
         }
     }
     
+    private func blink(color : SimoneColorEnum) {
+        presenter?.blinkDelayed(turn: .cpu, color: color)
+    }
+    
     /**
      * Received MAttachPresenter from GameViewControllerPresenter
      * @param message
@@ -70,6 +74,7 @@ class GameViewActor: OSActor, GameViewActorProtocol {
         presenter = message.presenter
     }
     
+    //Not available on GameViewActor.java
     internal func sendBeginMessage(_ message: Message) {
         sendToCpuActor(message: message)
     }
@@ -118,7 +123,8 @@ class GameViewActor: OSActor, GameViewActorProtocol {
     internal func handlePlayerTurn(_ message: Message) {
         playerIndex = 0
         playerSequence.removeAll()
-        presenter?.changeTurn(.player, sequenceIndex: cpuSequence.count - 1)
+        presenter?.computePlayerTurn(turn: .player)
+        //presenter?.changeTurn(.player, sequenceIndex: cpuSequence.count - 1)
     }
     
     /**
@@ -143,7 +149,7 @@ class GameViewActor: OSActor, GameViewActorProtocol {
                 
                 if cpuSequence.count - playerSequence.count == 0 {
                     
-                    presenter?.changeTurn(.cpu, sequenceIndex: playerIndex)
+                    presenter?.computeCpuTurn(score: playerIndex, turn: .cpu) //.changeTurn(.cpu, sequenceIndex: playerIndex)
                     sendToCpuActor(message: MGimmeNewColor())
                     playerSequence.removeAll()
                 }
@@ -167,10 +173,6 @@ class GameViewActor: OSActor, GameViewActorProtocol {
         if !paused {
             sendToCpuActor(message: MNextColor())
         }
-    }
-    
-    private func blink(color : SimoneColorEnum) {
-        presenter?.blinkDelayed(turn: .cpu, color: color)
     }
     
     private func sendToCpuActor(message: Message) {

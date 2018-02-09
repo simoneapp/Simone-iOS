@@ -11,10 +11,16 @@ import Oscar
 
 protocol GameViewPresenterProtocol {
     var tapToBegin: Bool { get }
-    var finalScore: Bool { get }
-    func blinkDelayed(turn: UserType, color: SimoneColorEnum)
-    func changeTurn(_ turn: UserType, sequenceIndex: Int)
+    var finalScore: Int { get }
+    var playerIsBlinking: Bool { get }
+    func prepareGame(message: Message)
+    func blinkDelayed(turn: UserType, color: SimoneColorEnum?)
     func gameLost(score: Int)
+    func computePlayerTurn(turn: UserType)
+    func computeCpuTurn(score: Int, turn: UserType)
+    func handleResume()
+    func handlePause()
+    func endGame()
 }
 
 
@@ -22,13 +28,14 @@ class GameViewPresenter: NSObject, GameViewPresenterProtocol {
     
     private var viewController: SinglePlayerBaseViewController?
     private var currentScore: Int = 0
-    var finalScore: Int = 0
     private var type: SinglePlayerType = .easy
-    private var playerIsBlinking: Bool = false
-    var tapToBegin: Bool = true
     private var viewPaused: Bool = false
     private var gameViewActor: OSActorRef?
     private var sender: OSActorRef?
+    
+    var finalScore: Int = 0
+    var playerIsBlinking: Bool = false
+    var tapToBegin: Bool = true
     
     init(viewController: SinglePlayerBaseViewController,
          type: SinglePlayerType,
@@ -42,19 +49,90 @@ class GameViewPresenter: NSObject, GameViewPresenterProtocol {
         self.gameViewActor?.tell(MAttachPresenter(presenter: self))
     }
     
-    func blinkDelayed(turn: UserType, color: SimoneColorEnum) {
+    
+    //PUBLIC
+    func computePlayerTurn(turn: UserType) {
+        if !playerIsBlinking {
+            viewController?.updateCentralTextView(with: "your\nturn!")
+            if type == .hard {
+                viewController?.swapButtonPositions()
+            }
+        }
         
+        playerIsBlinking = true
+        
+        if turn == .cpu {
+            //viewController?.blinkDelayed(amount: 0.1, on: nil)
+        }
     }
     
-    func changeTurn(_ turn: UserType, sequenceIndex: Int) {
+    func prepareGame(message: Message) {
+        tapToBegin = false
+        finalScore = 0
+        playerIsBlinking = false
+        gameViewActor?.tell(message)
+    }
+    
+    func computeCpuTurn(score: Int, turn: UserType){
         
-        if !playerIsBlinking {
-            //viewController.updateSimoneTextView
+        currentScore = score + 1
+        
+        if playerIsBlinking {
+            viewController?.updateCentralTextView(with: "\(currentScore)")
+            finalScore = currentScore
+            //Score Helper: Check achievements
+        }
+        
+        playerIsBlinking = false
+        
+        if turn == .cpu {
+            //viewController?.blinkDelayed(amount: <#T##Double#>, on: <#T##UIButton#>)
         }
     }
     
     func gameLost(score: Int) {
-        
+        finalScore = score
+        //Send result to Leaderboard
+        //Check N games Achievement
+        //Analytics log Score
+        tapToBegin = true
+        viewController?.saveScore()
+        viewController?.renderYouLost(with: finalScore)
+    }
+    
+    func blinkDelayed(turn: UserType, color: SimoneColorEnum? = nil) {
+        switch turn {
+        case .cpu:
+            gameViewActor?.tell(MNextColor())
+            break
+        case .player:
+            guard let color = color else { return }
+            gameViewActor?.tell(MGuessColor(guessedColor: color))
+            break
+        }
+    }
+    
+    func handleResume() {
+        if !playerIsBlinking && viewPaused {
+            viewPaused = false
+            gameViewActor?.tell(MPause(isPausing: false))
+        }
+    }
+    
+    func handlePause() {
+        if !playerIsBlinking {
+            viewPaused = true
+            gameViewActor?.tell(MPause(isPausing: true))
+        }
+    }
+    
+    func endGame() {
+        //Send result to Leaderboard
+        //Play Simone Music
+    }
+    
+    func blinkDelayed(time: Double) {
+        //getHandler().sendMessageDelayed(m, time);
     }
     
 
