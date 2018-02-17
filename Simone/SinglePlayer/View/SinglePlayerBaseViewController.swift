@@ -10,7 +10,7 @@ import UIKit
 
 class SinglePlayerBaseViewController: SquaredViewController {
 
-    @IBOutlet weak var lblGoBack: UILabel!
+    @IBOutlet weak var btnGoBack: UIButton!
     @IBOutlet internal var centralFab: SimoneFabButton!
     @IBOutlet internal var scoreButton: SimoneFabButton!
     
@@ -46,15 +46,17 @@ class SinglePlayerBaseViewController: SquaredViewController {
     }
     
     public func updateCentralTextView(with text: String) {
-        centralFab.setTitle(text, for: .normal)
-        //animation
+        DispatchQueue.main.async {
+            self.centralFab.setTitle(text, for: .normal)
+            //animation
+        }
     }
     
     public func blinkDelayed(color: SimoneColorEnum) {
         guard let button = buttons[color] else { return }
         button.alpha = 0.4
         //play sound
-        presenter.blinkDelayed(turn: .cpu, color: color)
+        presenter.handleBlinkDelayed(turn: .cpu, color: color)
     }
     
     public func resetButton(for color: SimoneColorEnum) {
@@ -94,6 +96,16 @@ class SinglePlayerBaseViewController: SquaredViewController {
         
     }
     
+    @IBAction func didTapCentralFab() {
+        
+        //stop simone music
+        
+        if presenter.tapToBegin {
+            prepareViewsForGame()
+            presenter.prepareGame(message: MStartGameVsCpu())
+        }
+    }
+    
     @IBAction func goBack() {
         
         if presenter.tapToBegin {
@@ -116,5 +128,28 @@ class SinglePlayerBaseViewController: SquaredViewController {
         self.performSegue(withIdentifier: "unwindSinglePlayer", sender: self)
     }
     
+    /// Buttons handling
+    
+    override func didTapFirst() {
+        handleTap(on: btnFirst)
+    }
+    
+    override func didTapSecond() {
+        handleTap(on: btnSecond)
+    }
 
+    override func didTapThird() {
+        handleTap(on: btnThird)
+    }
+    
+    override func didTapFourth() {
+        handleTap(on: btnFourth)
+    }
+    
+    func handleTap(on button: UIButton) {
+        let key = buttons.keys.first(where: { buttons[$0] == button })
+        if let key = key {
+            presenter.didTapColorButton(color: key)
+        }
+    }
 }

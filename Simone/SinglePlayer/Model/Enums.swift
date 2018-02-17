@@ -17,3 +17,8 @@ enum UserType {
     case cpu
     case player
 }
+
+enum MessageSource {
+    case actor
+    case presenter
+}

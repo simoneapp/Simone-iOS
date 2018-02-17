@@ -39,8 +39,9 @@ class CPUActor: OSActor {
         guard let viewActor = actorSystem.actor(of: GameViewActor.self, caller: self)
             else { return }
         
-        sequence.append(SimoneColorEnum.all[SimoneColorEnum.all.count.randomInto()])
+        sequence.append(SimoneColorEnum.all[(SimoneColorEnum.all.count-1).randomInto()])
         viewActor.tell(MTimeToBlink(sequence: sequence))
+        print("SEQUENCE: \(sequence)")
     }
     
 }

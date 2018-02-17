@@ -16,10 +16,6 @@ class ActorSystemManager: NSObject {
     static var manager = ActorSystemManager()
     
     override init() {
-        //self.createActors()
-    }
-    
-    func createActors() {
         system = OSMainActorSystem(configs: nil) { (builder) in
             builder?.addActor({ (system) -> OSActor? in
                 return CPUActor.actor(with: system)
@@ -29,4 +25,5 @@ class ActorSystemManager: NSObject {
             })
         }
     }
+    
 }

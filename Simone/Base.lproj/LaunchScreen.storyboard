@@ -1,7 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -13,13 +16,65 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="70D-R5-J2E">
+                                <rect key="frame" x="46.5" y="248" width="283" height="171"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SE FAI COME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98n-72-PJw">
+                                        <rect key="frame" x="0.0" y="0.0" width="283" height="53"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="44"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SIMONE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cCL-lf-3AT">
+                                        <rect key="frame" x="0.0" y="53" width="283" height="84"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="70"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NON PUOI CERTO SBAGLIAR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N3A-2R-8kL">
+                                        <rect key="frame" x="0.0" y="147" width="283" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" weight="black" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cCL-lf-3AT" secondAttribute="trailing" id="8DU-xk-3Zu"/>
+                                    <constraint firstAttribute="trailing" secondItem="N3A-2R-8kL" secondAttribute="trailing" id="F7H-Fz-HZL"/>
+                                    <constraint firstItem="98n-72-PJw" firstAttribute="top" secondItem="70D-R5-J2E" secondAttribute="top" id="GRd-v6-wFl"/>
+                                    <constraint firstItem="98n-72-PJw" firstAttribute="leading" secondItem="70D-R5-J2E" secondAttribute="leading" id="GZh-cK-dYz"/>
+                                    <constraint firstAttribute="trailing" secondItem="N3A-2R-8kL" secondAttribute="trailing" id="LBm-EY-FC2"/>
+                                    <constraint firstItem="N3A-2R-8kL" firstAttribute="leading" secondItem="70D-R5-J2E" secondAttribute="leading" id="LUm-vK-s7f"/>
+                                    <constraint firstAttribute="bottom" secondItem="N3A-2R-8kL" secondAttribute="bottom" id="jJ3-g5-9fw"/>
+                                    <constraint firstItem="cCL-lf-3AT" firstAttribute="top" secondItem="98n-72-PJw" secondAttribute="bottom" id="paE-0z-oal"/>
+                                    <constraint firstAttribute="trailing" secondItem="98n-72-PJw" secondAttribute="trailing" id="suV-Ak-qpL"/>
+                                    <constraint firstItem="N3A-2R-8kL" firstAttribute="leading" secondItem="70D-R5-J2E" secondAttribute="leading" id="szJ-vI-wRQ"/>
+                                    <constraint firstItem="N3A-2R-8kL" firstAttribute="top" secondItem="cCL-lf-3AT" secondAttribute="bottom" constant="10" id="vgY-oh-87h"/>
+                                    <constraint firstItem="cCL-lf-3AT" firstAttribute="leading" secondItem="70D-R5-J2E" secondAttribute="leading" id="zSO-b6-0VK"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- An Italian motto without meaning" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ruR-PF-FrA">
+                                <rect key="frame" x="93.5" y="469" width="236" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ruR-PF-FrA" firstAttribute="top" secondItem="70D-R5-J2E" secondAttribute="bottom" constant="50" id="1lu-Vj-5hW"/>
+                            <constraint firstItem="ruR-PF-FrA" firstAttribute="trailing" secondItem="70D-R5-J2E" secondAttribute="trailing" id="Im3-dl-NLW"/>
+                            <constraint firstItem="70D-R5-J2E" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Xac-M9-qAM"/>
+                            <constraint firstItem="70D-R5-J2E" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="f7w-1b-1ix"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
 </document>

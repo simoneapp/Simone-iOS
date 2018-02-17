@@ -123,8 +123,7 @@ class GameViewActor: OSActor, GameViewActorProtocol {
     internal func handlePlayerTurn(_ message: Message) {
         playerIndex = 0
         playerSequence.removeAll()
-        presenter?.computePlayerTurn(turn: .player)
-        //presenter?.changeTurn(.player, sequenceIndex: cpuSequence.count - 1)
+        presenter?.computePlayerTurn(source: .actor, color: cpuSequence[cpuSequence.count - 1])
     }
     
     /**
@@ -149,7 +148,7 @@ class GameViewActor: OSActor, GameViewActorProtocol {
                 
                 if cpuSequence.count - playerSequence.count == 0 {
                     
-                    presenter?.computeCpuTurn(score: playerIndex, turn: .cpu) //.changeTurn(.cpu, sequenceIndex: playerIndex)
+                    presenter?.computeCpuTurn(score: playerIndex, source: .actor, color: cpuSequence[playerIndex]) //.changeTurn(.cpu, sequenceIndex: playerIndex)
                     sendToCpuActor(message: MGimmeNewColor())
                     playerSequence.removeAll()
                 }

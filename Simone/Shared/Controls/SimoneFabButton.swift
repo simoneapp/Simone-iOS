@@ -25,8 +25,8 @@ class SimoneFabButton: UIButton {
         layer.shadowRadius = 10.0
         layer.shadowOpacity = 0.15
         
-        
         setTitleColor(.gray, for: .normal)
         titleLabel?.font = UIFont.systemFont(ofSize: rect.size.height * 0.25, weight: .black)
+        titleLabel?.numberOfLines = 0
     }
 }
